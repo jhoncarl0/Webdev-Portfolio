@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="x-icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>JHON CARLO CONDOR</title>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <div class="logo-container">
+            <img class="logo" src="condor.jpg.png">
+            </div>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#contacts">CONTACTS</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <section class="home" id="home">
+    <div class="content">
+        <div class="typing-container">
+        <h4 class="h4-typing">Hello, I am</h4>
+        <h1>JHON CARLO CONDOR</h1>
+        </div>
+        <p>
+            a passionate web developer with a focus on creating innovative and <br>user-friendly web solutions. I take pride in my ability to transform ideas<br> into functional, visually appealing websites and web applications.
+        </p>
+        <div class="social-media-icons">
+            <a href="https://www.facebook.com/carlo.condor.9?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2F_jjhoncrlo%3Ffbclid%3DIwAR2XGDgmract4XPYASAnd6ar6ITdzq3Yk2NJ62TSNM_QZfrIXzWLIxrgVMg&h=AT2Yfxmewk5Yh5rPEVMymx3lI5NO5q1VVKnBNHEnwRf140IL74YJ7mejLKmebNx23-bnBz5a4jjCsiyhMLZQxm-F-IAYq9iJ90o3PYaUfAejcTHJkWp2nn8TD37cCtNQSq1W" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    </section>
+    
+    <section class="about" id="about">
+        <div class="main">
+            <img src="about.png">
+            <div class="about-section">
+                <h2>ABOUT ME</h2>
+                <p>
+                    Greetings! I'm Jhon Carlo, a passionate web developer with a knack for turning digital dreams into reality. My journey in the world of web development commenced during my college years, and ever since, I've been enamored with the endless possibilities of the web.<br><br>I'm always eager to take on new challenges and work with fellow enthusiasts. Whether you're a startup looking to establish an online presence or a fellow developer interested in a collaboration, I'm here to transform your web aspirations into reality. Let's connect and embark on a web development journey together!
+                </p>
+                <button type="button">Let's Talk</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="service" id="services">
+        <div class="title">
+            <h2>SERVICES</h2>
+        </div>
+        <div class="box">
+            <div class="card">
+                <h5><br>Web development<br><br><br></h5>
+                <div class="post">
+                <ul>
+                    <li>Custom Website development</li>
+                    <li>Responsive Design</li>
+                    <li>Front-End Development</li>
+                    <li>Back-End Development</li>
+                </ul>
+                </div>
+            </div>
+            <div class="card">
+                <h5><br>Consultation and Collaboration<br><br></h5>
+                <div class="post">
+                <ul>
+                    <li>Project Consultation</li>
+                    <li>Tech Stack Selection</li>
+                    <li>Team Collaboration</li>
+                    <li>Training and Workshop</li>
+                </ul>
+                </div>
+            </div>
+            <div class="card">
+                <h5><br>Graphic Design<br><br></h5>
+                <div class="post">
+                <ul>
+                    <li>Creating logos, banners, and etc.</span></li>
+                    <li>Designing marketing materials</li>
+                    <li>Designing marketing materials</li>
+                </ul>
+                </div>
+        </div>
+    </div>
+
+    <section class="contacts" id="contacts">
+    <div class="text">
+        <img class="jhon" src="lastpic.png">
+        <p>
+            If you're interested in collaborating or have any questions,<br> please don't hesitate to get in touch. You can reach me at<br>jhoncarlocondor2@gmail.com,or send me a message through<br> the contact form on this website.
+            Thank you for visiting my portfolio.<br> I look forward to connecting with you and working on exciting web<br> projects together.
+        </p>
+    </div>
+        <div class="contact-form">
+            <h2>Contact Me</h2>
+            <form action="submit.php" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+    
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+    <footer>
+    <div class="footerBottom">
+        <p>Copyright &copy;2023 UC-Project</p>
+    </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbar = document.querySelector("nav");
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll("nav ul li a");
+    
+            window.addEventListener("scroll", function () {
+                stickyNavbar();
+                highlightSection();
+            });
+    
+            function stickyNavbar() {
+                const sticky = navbar.offsetTop;
+    
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky");
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+            }
+    
+            function highlightSection() {
+                let scrollPosition = window.scrollY + navbar.offsetHeight + 5;
+    
+                sections.forEach((section, index) => {
+                    const top = section.offsetTop;
+                    const bottom = top + section.offsetHeight;
+    
+                    if (scrollPosition >= top && scrollPosition <= bottom) {
+                        navLinks.forEach((link) => {
+                            link.classList.remove("active");
+                        });
+                        navLinks[index].classList.add("active");
+                    }
+                });
+            }
+    
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+    
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetElement = document.getElementById(targetId);
+    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - navbar.offsetHeight,
+                            behavior: "smooth",
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+const menuButton = document.querySelector('.menu-button');
+const navList = document.querySelector('nav ul');
+
+menuButton.addEventListener('click', () => {
+    navList.classList.toggle('show');
+});
+</script>
+
+</body>
+</html>
